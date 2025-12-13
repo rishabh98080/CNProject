@@ -24,9 +24,8 @@ function addTask() {
 
     li.appendChild(del);
     taskList.appendChild(li);
-    taskInput.value = "";
+    taskInput.value = ""
 }
-
 addBtn.addEventListener("click", addTask);
 
 taskInput.addEventListener("keypress", (e) => {

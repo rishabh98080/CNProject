@@ -9,7 +9,7 @@ if(localStorage.getItem('lastTaskCount') == undefined){
 }
 function taskcreator(){
     let number  = Number(localStorage.getItem('lastTaskCount').slice(4));
-    let newTaskName = "task" + Number(number + 1) ;
+    let newTaskName = "task" + Number(number + 1);
     localStorage.setItem('lastTaskCount',newTaskName);
     return String(newTaskName);
 }
@@ -38,10 +38,9 @@ function fetchData(){
     return localobjects();
 }
 function addTask() {
-    const taskName = taskInput.value.trim();
+    const now = new Date();
+    const taskName = taskInput.value.trim() +" " +" "+ " [" + now.toLocaleDateString() + " " + now.toLocaleTimeString()+"]";
     if (taskName === "") return;
-
-    
 
     const li = document.createElement("li");
     li.textContent = taskName;
@@ -108,10 +107,7 @@ function listPopulator(){
         
     }
 }
-function deleteTask(taskObject,taskNumber){
-    delete taskObject.taskNumber;
-    return taskObject;
-}
 {
     listPopulator();
 }
+

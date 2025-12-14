@@ -79,7 +79,7 @@ function listPopulator(){
         const key = localStorage.key(i);
 
         if(key.slice(0,4) == "task"){
-            let taskName = taskInput.value.trim();
+            let taskName = key; // found the error here i.e [let taskName = taskInput.value.trim();]
             if (taskName === "" ) return;
             taskName += " " +" "+ " [" + now.toLocaleDateString() + " " + now.toLocaleTimeString()+"]";
 

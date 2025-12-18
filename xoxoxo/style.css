@@ -1,0 +1,38 @@
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+.square-box{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap : 5px;
+    border : 2px solid black;
+    width: fit-content;
+    padding : 5px;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    cursor: pointer;
+    width : 30px;
+    height : 30px;
+    background-color: white;
+    border: 1px solid black;
+}
+.others{
+    border-radius: 10px;
+    margin: 40%;
+    width: fit-content;
+    padding : 10px;
+    border: 2px solid blue ;
+}
+.score-card{
+    display: flex;
+    gap : 10px;
+    padding : 3px;
+}
+.score{
+    max-width: 20px;
+}

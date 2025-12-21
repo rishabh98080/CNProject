@@ -15,6 +15,8 @@ const checkWinner = (moves, player) => {
         // Check if every number in a winning combo is present in the player's moves
         if (combo.every(val => moves.includes(val))) {
             alert(`${player} wins!`);
+            const box = document.getElementById('others');
+            box.style.backgroundColor = "green";
             disableAllButtons();
             return true;
         }
@@ -35,14 +37,18 @@ for (let i = 0; i < buttons.length; i++) {
     const button = buttons[i];
     button.addEventListener("click", () => {
         const button_id = button.getAttribute('id').slice(4); // Get the number part
-
+        button.style.color = "black";
+        button.style.fontSize = "20px";
         if (counter % 2 == 0) {
+            button.style.backgroundColor = "lightgreen";
             button.textContent = "X";
+
             move_x.push(button_id);
             counter++;
             button.disabled = true; // Disable immediately to prevent double-clicking
             checkWinner(move_x, "X");
         } else {
+            button.style.backgroundColor = "lightblue";
             button.textContent = "O";
             move_o.push(button_id);
             counter++;

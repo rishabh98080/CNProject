@@ -1,29 +1,36 @@
 *{
-    text-align : center;
     margin : 0;
     padding : 0;
     box-sizing: border-box;
+}
+body{
+    text-align: center;
+    font-size: larger;
+}
+h4{
+    margin-top :10px;
+    font-style: oblique;
 }
 .square-box{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap : 5px;
     border : 2px solid black;
-    width: fit-content;
     padding : 5px;
     justify-content: center;
     align-items: center;
 }
 button{
     cursor: pointer;
-    width : 30px;
-    height : 30px;
+    width : 60px;
+    height : 60px;
     background-color: white;
     border: 1px solid black;
 }
 .others{
     border-radius: 10px;
-    margin: 40%;
+    margin-top: 100px;
+    margin-left: 35%;
     width: fit-content;
     padding : 10px;
     border: 2px solid blue ;

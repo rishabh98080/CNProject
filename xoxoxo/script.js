@@ -16,7 +16,7 @@ const checkWinner = (moves, player) => {
         if (combo.every(val => moves.includes(val))) {
             alert(`${player} wins!`);
             const box = document.getElementById('others');
-            box.style.backgroundColor = "green";
+            box.style.backgroundColor = "lightgreen";
             disableAllButtons();
             return true;
         }

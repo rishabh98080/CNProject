@@ -42,3 +42,6 @@ th:hover{
     cursor: pointer;
     background-color: rgb(251, 164, 130);
 }
+#row2{
+    visibility: hidden;
+}

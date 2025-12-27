@@ -37,7 +37,8 @@ function showData(data){
     date.textContent = tdate;
     for(let key in data){
         if(tday.trim().toLowerCase() == "sun".trim()){
-            
+            const row2 = document.getElementById('row2');
+            row2.style.visibility = "visible";
             if(key.trim().toLowerCase() == "sunday_even".trim()){
                 day.textContent = "Sunday";
                 bfast.textContent = data[key.trim()]["Breakfast".trim()];

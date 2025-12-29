@@ -38,6 +38,8 @@ function showData(data){
     for(let key in data){
         console.log(key.slice(0,3).trim().toLowerCase())
         if(tday.trim().toLowerCase() == "sun".trim() && tday.trim().toLowerCase() == key.slice(0,3).trim().toLowerCase()){
+            const bfst_time = document.getElementById('time-pill-bfast');
+            bfst_time.textContent = "8:00 AM - 9:00 AM";
             const row2 = document.getElementById('row2');
             row2.style.visibility = "visible";
             console.log(key.trim().toLowerCase());
